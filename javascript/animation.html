@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        #container{
+            width: 400px;
+            height: 400px;
+            background-color: aqua;
+            border: 2px solid black;
+            border-radius: 10px;
+            position: relative;
+
+        }
+
+        #inside1{
+            width:50px;
+            height:50px;
+            border: 2px solid rgb(248, 4, 4);
+            border-radius: 10px;
+            background-color: black;
+            position: absolute;
+        }
+        #inside2{
+            width:50px;
+            height:50px;
+            border: 2px solid rgb(8, 8, 8);
+            border-radius: 10px;
+            background-color: rgb(63, 240, 9);
+            position: fixed;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container" onmouseover="onmouseover()" onmouseout="onmouseout(this)" >
+        <div id="inside1"> </div>
+        <div id="inside2"></div>
+       
+    </div>
+    <!-- <button onclick="myMove()">click</button> -->
+    <!-- <button onclick="changecolor()" >CHANGE COLOR</button> -->
+    <!-- <button onmousedown="changecolor()" onmouseup="changecolor2()" >CHANGE COLOR</button> -->
+     <button id="btn">click</button> 
+
+
+    <script>
+        /*function myMove() {
+            let pos=0;
+            const elm=document.getElementById("inside1");
+            const id1=setInterval(farme,10);
+            function farme(){
+                if(pos==350){
+                    clearInterval(id1);
+                }
+                pos++;
+                elm.style.top=pos+ 'px';
+                elm.style.left=pos++ +'px';
+
+            }
+
+            const elm2=document.getElementById("inside2");
+            const id2=setInterval(frame2,10);
+            function frame(){
+                if(pos==350){
+                    clearInterval(id2);
+
+                }
+                pos++;
+                elm2.style.top=pos+ 'px';
+
+            }
+        }
+
+        function changecolor(){
+            var div=document.getElementById("container");
+            div.style.backgroundColor="red";
+        }
+
+
+        function onmouseover(){
+            var div=document.getElementById("container");
+            div.style.backgroundColor="orange";
+        }
+
+        function onmouseout(this){
+        
+            div.style.backgroundColor="aqua";
+        }
+
+        function changecolor(){
+            var div=document.getElementById("container");
+            div.style.backgroundColor="red";
+        }
+        function changecolor2(){
+            var div=document.getElementById("container");
+            div.style.backgroundColor="aqua";
+        }*/
+        document.getElementById('btn').addEventListener('click',fun)
+
+       function fun(){
+            document.getElementById('container').style.backgroundColor='pink';
+        }
+
+    </script>
+</body>
+</html>

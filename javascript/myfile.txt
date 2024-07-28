@@ -1,0 +1,12 @@
+please like my channel 
+
+key points to fetch the api key is
+
+fetch('').then(responce=>{
+       if(!responce.ok){
+        throw new Error ('network is not responding');
+
+       }
+       return responce.text();
+
+}).then(data=>console.log(data)).catch(error=>console.error(error));

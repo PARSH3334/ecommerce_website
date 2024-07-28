@@ -1,0 +1,12 @@
+body{
+    background-image: url('icons/dest2.png');
+    background-position: center;
+    background-repeat:no-repeat ;
+    background-size: cover;
+
+}
+h1{
+    border-style: 2px solid ;
+    border: color(display-p3 red green blue);
+    border-width:3px 10px 3px 10px ;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bubbling</title>
+    <style>
+        body{
+            padding: 20px;
+            background-color: pink;
+
+        }
+        div{
+            padding: 20px;
+            background-color: aqua;
+            width: max-content;
+
+        }
+        span{
+            padding: 20px;
+            background-color: brown;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="loc">
+        <span>
+          <button> CLICK ME</button> 
+        </span>
+
+    </div>
+
+    <script>
+        //pop ups:-
+       // prompt("hello are you ready or it??","yes");
+      // alert("heeee you  stop there!!!!!");
+     // confirm("are you 18 year old to watch this");
+       // let loc=document.getElementById('loc');
+        //loc.innerHTML=window.location.href;
+       // const div=document.getElementsByTagName('div')[0];
+        div.addEventListener('click',(event)=>{
+
+            if(event.target.tagName=='BUTTON'){
+            console.log("button was clicked");
+            }
+            else if(event.target.tagName=='SPAN'){
+                console.log("sapn was clicked");
+            }
+            else if(event.target.tagName=='DIV'){
+                console.log("DIV was clicked");
+            }
+            else if(event.target.tagName=='BODY'){
+                console.log("BODY was clicked");
+            }
+        })
+
+
+        let a=document.querySelector('div');
+        console.log(a.getBoundingClientRect());
+    </script>
+</body>
+</html>

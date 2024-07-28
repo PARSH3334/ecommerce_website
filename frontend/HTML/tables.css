@@ -1,0 +1,15 @@
+.info{
+    border: 1px soild black;
+    padding: 8px;
+    
+}
+.info th{
+    padding-top: 12px 0px;
+    text-align: left;
+    background-color: aqua;
+    color: black;
+}
+.info2{
+    border: 1px solid black;
+    padding:8px;
+}

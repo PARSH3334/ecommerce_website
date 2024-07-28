@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div> This are top 5 Sigma Male
+        <ul>
+            <li class="Male">Andrew Tate</li>
+            <li class="female">keanu Reeeves</li>
+            <li id="sigma"> Johnny Deep</li>
+            <li class="qs"> Johnny Bravo</li>
+            <li>shinchan</li>
+        </ul>
+    </div>
+
+    <h1>
+        PARSHWA SURESH HAGARE
+    </h1>
+
+    <div class="hero" style="background-color: aqua; border: 2px solid black;">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae reiciendis libero perspiciatis odio quis veritatis sequi fugiat enim ullam, fuga voluptate soluta officia expedita quas excepturi, eaque porro eius accusantium.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe assumenda dolore, consectetur, pariatur excepturi voluptatibus dicta cum nam molestiae ea doloremque optio amet fugiat commodi in eos nobis, vel omnis.
+
+        const list =document.queryselect('ul');
+        const childtochange=list.childern[1];
+        const newli=document.createElement('li');
+        newli.textContent='this is begining'
+        list.replaceChild(newli,childtochange);
+    </div>
+
+    <script src="dom.js"></script>
+</body>
+</html>

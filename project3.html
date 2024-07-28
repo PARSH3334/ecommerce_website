@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gussing Game</title>
+    <style>
+        *{
+        padding: 0;
+        margin:0;
+        box-sizing: border-box;
+
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+        }
+        .container{
+            background-color: aliceblue;
+            border-radius: 30px;
+
+        }
+        .head{
+            padding:30px;
+            border:2px soild rgb(3, 3, 3);
+
+        }
+        .entry{
+            margin:20px;
+            text-align: center;
+
+        }
+        .entry input{
+            height:60px;
+            width:300px;
+            border-radius: 20px;
+            margin-right:20px;
+            margin-bottom:50px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="head"><h1>Guessing Game between 1 to 100</h1></div>
+
+        <div class="entry">
+            <input type="text" id="input"/>
+            <button id="btn">Guess</button>
+            <p class='wrong'></p>
+            <p id="guesses">No of guesses:0</p>
+        </div>
+    </div>
+
+    <script>
+        let input=document.getElementById('input');
+        let btn=document.getElementById('btn');
+        let wrong=document.querySelector('.wrong');
+        let gusess= document.getElementById('gusess');
+
+        let answer=Math.floor(Math.random()*100)+1;
+        console.log(answer);
+        let numGuess=0;
+
+        btn.addEventListener("click",()=>{
+            gusessnumber();
+
+        })
+
+        function gusessnumber(){
+            if(input.value<1||input.value>100||isNaN(input.value)){
+                wrong.innerHTML="Enter the number between 1 to 100";
+            }
+            else{
+                numGuess++;
+                guesses.innerHTML="NO. Of Guess :"+numGuess;
+
+                if(input.value>answer){
+                    wrong.innerHTML="you guessed too High"
+                    input.value='';
+                }
+                else if(input.value<answer){
+                    wrong.innerHTML="you Guessed too low"
+                    input.value='';
+
+                }else{
+                    wrong.innerHTML="Congratulation !!!! you guessed the correct answer !!!!!";
+
+                    btn.disabled=true;
+                    setTimeout(()=>{
+                        resetGame();
+                    },5000)
+
+                }
+
+                
+            }
+        }
+
+        function resetGame(){
+            numGuess=0;
+            answer=Math.floor(Math.random()*100)+1;
+            input.value="";
+            guesses.innerHTML="No of Guess :0";
+        }
+    </script>
+</body>
+</html>
